@@ -1,14 +1,14 @@
-"test messenger bot on pythonanywhere use flask" 
+test messenger bot on pythonanywhere use flask
 
-"Cau hinh file wsgi"
+Cau hinh file wsgi
 
-"import sys"
+import sys
 
-"path = '/home/boycq9x/messenger-bot'"
+path = '/home/boycq9x/messenger-bot'
 
-"if path not in sys.path:"
+if path not in sys.path:
 
-"sys.path.append(path)"
+  sys.path.append(path)
 
 
-"from bot import app as application""
+from bot import app as application
