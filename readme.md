@@ -1,8 +1,9 @@
-test messenger bot on pythonanywhere use flask
+test messenger bot trên pythonanywhere với flask
 
-Cau hinh file wsgi
+Cấu hình file wsgi
 
-<pre><code>import sys
+<pre><code>
+import sys
 path = '/home/boycq9x/messenger-bot'
 if path not in sys.path:
    sys.path.append(path)
