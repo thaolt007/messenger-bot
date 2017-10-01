@@ -4,10 +4,11 @@ from pymessenger import Bot
 
 app = Flask(__name__)
 
-ACCESS_TOKEN = 'EAAU7uPzf6CwBAOQt6aXwmlyKwpoKxC3C3wxd5x0QcqUWYUD9DJKvJUWTyE7gs5ZAeSwEFqc1kY8o49bfyyZC8hNpWM0zjifmanIxuxjhtZBqCXZBlIPYFthVZA68oY3cl8Y4qcDDDEj0XKVNHCfzTwrppa6wMcHr2nscYJWOeDwZDZD'
+ACCESS_TOKEN = 'EAAU7uPzf6CwBAMOelEAnKrduXjdFbJw2lFg0Hds8NgLQcXRLZB2VlAtPMZAZCi9IBJZCHMZAgYOQiX1XLG099FVcyiRzZCmgUZB9ZCiAKFJX8qE9eqfJWXhIVZB0qB4P8XuEY1JgZAxX3jCJttDQY16ZB9XFonnVSV0aHI0heZC8ntmyHwZDZD'
+
 bot = Bot(ACCESS_TOKEN)
 
-@app.route('/webhook', methods=['GET'])
+@app.route('/', methods=['GET'])
 def verify():
     # when the endpoint is registered as a webhook, it must echo back
     # the 'hub.challenge' value it receives in the query arguments
@@ -18,7 +19,7 @@ def verify():
 
     return "Hello world", 200
 
-@app.route('/webhook', methods=['POST'])
+@app.route('/', methods=['POST'])
 def webhook():
 	data = request.get_json()
 	#log(data)
@@ -50,4 +51,4 @@ def log(message):
 	sys.stdout.flush()
 	
 if __name__ == "__main__":
-	app.run(debug = True, port = 8080)
+	app.run(debug = True, port = 80)
